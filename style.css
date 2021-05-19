@@ -7,12 +7,20 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 400px;
 }
 
 .color-container {
   border: 1px solid #1d3557;
+}
+
+.color-container.left {
+  border-radius: 20px 20px 0 0;
+}
+
+.color-container.right {
+  border-radius: 0 0 20px 20px;
 }
 
 h1 {
@@ -55,6 +63,8 @@ p {
   letter-spacing: 1px;
 }
 
+/* --- Color Divs --- */
+
 /* --- Color Block Divs --- */
 
 .light-blue {
@@ -76,4 +86,20 @@ p {
   height: 5rem;
   border-radius: 1rem;
   background: #e63946;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+  }
+
+  .color-container.left {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .color-container.right {
+    border-radius: 0 20px 20px 0;
+  }
 }
