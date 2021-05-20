@@ -5,22 +5,50 @@
   background: #f4f1de;
 }
 
+:root {
+  --color-primary: #1d3557;
+  --color-secondary: #a8dadc;
+  --color-accent: #e63946;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 400px;
 }
 
-.color-container {
+.container {
   border: 1px solid #1d3557;
+  padding-bottom: 5rem;
 }
 
-.color-container.left {
+.left {
   border-radius: 20px 20px 0 0;
 }
 
-.color-container.right {
+.right {
   border-radius: 0 0 20px 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+}
+
+.h-image {
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  display: inline-block;
+
+  padding-left: 0;
+  margin-left: 0;
 }
 
 h1 {
@@ -28,19 +56,19 @@ h1 {
   font-weight: bold;
   font-family: "Abril Fatface", cursive;
   letter-spacing: 2px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .nice-line {
-  width: 200px;
+  width: 35rem;
   height: 5px;
   border-radius: 2.5px;
   background: #1d3557;
   padding: 0;
-  margin: 0 15px 50px 15px;
+  margin-bottom: 40px;
 }
 
-h3 {
+h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0;
@@ -63,29 +91,27 @@ p {
   letter-spacing: 1px;
 }
 
-/* --- Color Divs --- */
-
 /* --- Color Block Divs --- */
 
 .light-blue {
   width: 100%;
   height: 5rem;
   border-radius: 1rem;
-  background: #a8dadc;
+  background: var(--color-primary);
 }
 
 .dark-blue {
   width: 100%;
   height: 5rem;
   border-radius: 1rem;
-  background: #1d3557;
+  background: var(--color-secondary);
 }
 
 .red {
   width: 100%;
   height: 5rem;
   border-radius: 1rem;
-  background: #e63946;
+  background: var(--color-accent);
 }
 
 @media screen and (min-width: 1024px) {
@@ -95,11 +121,32 @@ p {
     grid-template-rows: 400px;
   }
 
-  .color-container.left {
+  .left {
     border-radius: 20px 0 0 20px;
   }
 
-  .color-container.right {
+  .right {
     border-radius: 0 20px 20px 0;
   }
+}
+
+/* --- Typeface Section --- */
+
+.font-headings {
+  display: inline-block;
+  border-bottom: 2px solid var(--color-primary);
+  margin-bottom: 20px;
+}
+
+#atomic-age {
+  font-family: "AtomicAge-Regular", monospace;
+}
+
+#berlin {
+  font-family: "Berlin-Bold", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#grand-hotel {
+  font-family: "GrandHotel-Regular", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
